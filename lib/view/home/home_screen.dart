@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white),
+                              color: Colors.black), // Change to black
                         ),
                         SizedBox(height: 10),
                         Row(
@@ -56,26 +56,32 @@ class HomeScreen extends StatelessWidget {
                             Row(
                               children: [
                                 Icon(Icons.local_fire_department,
-                                    color: Colors.white),
+                                    color: Colors.black), // Change to black
                                 SizedBox(width: 5),
                                 Text("600 Kcal",
-                                    style: TextStyle(color: Colors.white)),
+                                    style: TextStyle(
+                                        color:
+                                            Colors.black)), // Change to black
                               ],
                             ),
                             SizedBox(width: 10),
                             Row(
                               children: [
-                                Icon(Icons.timer, color: Colors.white),
+                                Icon(Icons.timer,
+                                    color: Colors.black), // Change to black
                                 SizedBox(width: 5),
                                 Text("40 Min",
-                                    style: TextStyle(color: Colors.white)),
+                                    style: TextStyle(
+                                        color:
+                                            Colors.black)), // Change to black
                               ],
                             ),
                             Spacer(),
                             IconButton(
                               onPressed: () {},
                               icon: Icon(Icons.play_circle_fill,
-                                  color: Colors.white, size: 36),
+                                  color: Colors.black,
+                                  size: 36), // Change to black
                             ),
                           ],
                         )
@@ -91,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
 
-                  // Plan Cards (Push Up, Sit Up, Knee Push Up)
+                  // Plan Cards
                   PlanCard(
                     exercise: "Push Up",
                     reps: "100 Push up a day",
@@ -113,32 +119,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.fitness_center),
-            label: 'Exercises',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.schedule),
-            label: 'Plans',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: 'Log',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
           ),
         ],
       ),
@@ -169,7 +149,7 @@ class PlanCard extends StatelessWidget {
       child: ListTile(
         contentPadding: EdgeInsets.all(16.0),
         leading: Image.asset(
-          'assets/images/$exercise.jpg', // Replace with appropriate image paths
+          'assets/images/$exercise.jpg', // Use appropriate image paths
           width: 60,
           height: 60,
           fit: BoxFit.cover,
