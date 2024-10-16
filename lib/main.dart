@@ -1,3 +1,5 @@
+import 'package:fitness_application/view/logScreen/log_screen.dart';
+import 'package:fitness_application/view/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_application/view/login/splash_screen.dart';
 import 'package:fitness_application/view/login/login_screen.dart';
@@ -37,8 +39,8 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(), // Your Home screen
     ExercisesScreen(), // Your Exercises screen
     PlansScreen(), // Your Plans screen
-    Center(child: Text('Log')), // Placeholder for Log screen
-    Center(child: Text('Profile')), // Placeholder for Profile screen
+    LogScreen(), // Placeholder for Log screen
+    ProfileScreen(), // Placeholder for Profile screen
   ];
 
   @override
