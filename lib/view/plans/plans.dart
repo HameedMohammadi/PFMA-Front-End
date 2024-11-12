@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class PlansScreen extends StatelessWidget {
+  const PlansScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Plans'),
+        title: const Text('Plans'),
         backgroundColor: Colors.black, // AppBar background color
       ),
       body: Padding(
@@ -14,23 +16,24 @@ class PlansScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             buildTextField('Age'),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             buildTextField('Weight'),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             buildTextField('Sex'),
-            SizedBox(height: 32.0),
+            const SizedBox(height: 32.0),
             ElevatedButton(
               onPressed: () {
                 // Handle Create Plan button press
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.black, // Button background color
-                padding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 32.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 16.0, horizontal: 32.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30.0),
                 ),
               ),
-              child: Text(
+              child: const Text(
                 'Create Plan',
                 style: TextStyle(
                   fontSize: 18,

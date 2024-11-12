@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -78,11 +78,11 @@ class ProfileScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: TextStyle(fontSize: 16)),
+          Text(title, style: const TextStyle(fontSize: 16)),
           const SizedBox(height: 10),
           Text(
             value,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
@@ -103,10 +103,10 @@ class ProfileScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             children: [
               Icon(Icons.directions_bike, color: Colors.white),
-              const SizedBox(width: 5),
+              SizedBox(width: 5),
               Text(
                 "Cycling",
                 style:
@@ -163,9 +163,9 @@ class ProfileScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Steps"),
+          const Text("Steps"),
           const SizedBox(height: 10),
-          Text(
+          const Text(
             "999/2000",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
           ),
@@ -176,7 +176,7 @@ class ProfileScreen extends StatelessWidget {
             backgroundColor: Colors.orange.shade200,
           ),
           const SizedBox(height: 10),
-          Text("Keep it Up!", style: TextStyle(color: Colors.orange)),
+          const Text("Keep it Up!", style: TextStyle(color: Colors.orange)),
         ],
       ),
     );

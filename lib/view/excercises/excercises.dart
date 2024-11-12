@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ExercisesScreen extends StatelessWidget {
-  const ExercisesScreen({Key? key}) : super(key: key);
+  const ExercisesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Exercises',
           style: TextStyle(
             color: Colors.white,
@@ -39,14 +39,14 @@ class ExercisesScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        title: Text(
+                        title: const Text(
                           'Abs',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
                         ),
-                        subtitle: Text('10 Exercises'),
+                        subtitle: const Text('10 Exercises'),
                       ),
                     ),
                   );

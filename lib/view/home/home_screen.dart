@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -28,14 +30,14 @@ class HomeScreen extends StatelessWidget {
         children: [
           Expanded(
             child: SingleChildScrollView(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Workout card
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.all(16.0),
                     decoration: BoxDecoration(
                       color: Colors.grey.shade200,
                       borderRadius: BorderRadius.circular(16),
@@ -43,17 +45,17 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Hand Training",
                           style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black), // Change to black
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Row(
                           children: [
-                            Row(
+                            const Row(
                               children: [
                                 Icon(Icons.local_fire_department,
                                     color: Colors.black), // Change to black
@@ -64,8 +66,8 @@ class HomeScreen extends StatelessWidget {
                                             Colors.black)), // Change to black
                               ],
                             ),
-                            SizedBox(width: 10),
-                            Row(
+                            const SizedBox(width: 10),
+                            const Row(
                               children: [
                                 Icon(Icons.timer,
                                     color: Colors.black), // Change to black
@@ -76,10 +78,10 @@ class HomeScreen extends StatelessWidget {
                                             Colors.black)), // Change to black
                               ],
                             ),
-                            Spacer(),
+                            const Spacer(),
                             IconButton(
                               onPressed: () {},
-                              icon: Icon(Icons.play_circle_fill,
+                              icon: const Icon(Icons.play_circle_fill,
                                   color: Colors.black,
                                   size: 36), // Change to black
                             ),
@@ -88,14 +90,14 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
 
                   // Today Plan Section
-                  Text(
+                  const Text(
                     "Today Plan",
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
 
                   // Plan Cards
                   PlanCard(
@@ -132,7 +134,8 @@ class PlanCard extends StatelessWidget {
   final int progress;
   final String level;
 
-  PlanCard({
+  const PlanCard({
+    super.key,
     required this.exercise,
     required this.reps,
     required this.progress,
@@ -147,19 +150,20 @@ class PlanCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       child: ListTile(
-        contentPadding: EdgeInsets.all(16.0),
+        contentPadding: const EdgeInsets.all(16.0),
         leading: Image.asset(
           'assets/images/$exercise.jpg', // Use appropriate image paths
           width: 60,
           height: 60,
           fit: BoxFit.cover,
         ),
-        title: Text(exercise, style: TextStyle(fontWeight: FontWeight.bold)),
+        title:
+            Text(exercise, style: const TextStyle(fontWeight: FontWeight.bold)),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(reps),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             LinearProgressIndicator(
               value: progress / 100,
               color: Colors.green,

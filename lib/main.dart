@@ -8,7 +8,7 @@ import 'package:fitness_application/view/excercises/excercises.dart';
 import 'package:fitness_application/view/plans/plans.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
 
 // MainScreen contains the BottomNavigationBar and logic for navigation
 class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -37,17 +39,17 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _screens = [
     HomeScreen(), // Your Home screen
-    ExercisesScreen(), // Your Exercises screen
+    const ExercisesScreen(), // Your Exercises screen
     PlansScreen(), // Your Plans screen
-    LogScreen(), // Placeholder for Log screen
-    ProfileScreen(), // Placeholder for Profile screen
+    const LogScreen(), // Placeholder for Log screen
+    const ProfileScreen(), // Placeholder for Profile screen
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fitness App'),
+        title: const Text('Fitness App'),
       ),
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class LogScreen extends StatelessWidget {
-  const LogScreen({Key? key}) : super(key: key);
+  const LogScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'Log',
           style: TextStyle(
             color: Colors.white,
@@ -39,7 +39,7 @@ class LogScreen extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        title: Text(
+                        title: const Text(
                           'Sit Up',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -49,8 +49,8 @@ class LogScreen extends StatelessWidget {
                         subtitle: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('20 Sit Ups Today'),
-                            SizedBox(height: 5),
+                            const Text('20 Sit Ups Today'),
+                            const SizedBox(height: 5),
                             LinearProgressIndicator(
                               value: 0.75, // Example progress (75%)
                               color: Colors.green,
