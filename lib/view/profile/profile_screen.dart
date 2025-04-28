@@ -17,6 +17,49 @@ class ProfileScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
         elevation: 0,
+        actions: [
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.settings,
+                color: Colors.white), // Settings icon
+            onSelected: (value) {
+              // Perform actions based on selection
+              switch (value) {
+                case 'Profile Settings':
+                  print('Profile Settings Clicked');
+                  break;
+                case 'Notifications':
+                  print('Notifications Clicked');
+                  break;
+                case 'Dark Mode':
+                  print('Dark Mode Clicked - To be implemented');
+                  break;
+                case 'Logout':
+                  print('Logout Clicked');
+                  break;
+              }
+            },
+            itemBuilder: (BuildContext context) {
+              return [
+                const PopupMenuItem<String>(
+                  value: 'Profile Settings',
+                  child: Text('Profile Settings'),
+                ),
+                const PopupMenuItem<String>(
+                  value: 'Notifications',
+                  child: Text('Notifications'),
+                ),
+                const PopupMenuItem<String>(
+                  value: 'Dark Mode',
+                  child: Text('Dark Mode'),
+                ),
+                const PopupMenuItem<String>(
+                  value: 'Logout',
+                  child: Text('Logout'),
+                ),
+              ];
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

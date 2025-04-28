@@ -1,8 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:fitness_application/view/logScreen/log_screen.dart';
 import 'package:fitness_application/view/profile/profile_screen.dart';
-import 'package:flutter/material.dart';
 import 'package:fitness_application/view/login/splash_screen.dart';
-import 'package:fitness_application/view/login/login_screen.dart';
+import 'package:fitness_application/view/login/registration_screen.dart';
+import 'package:fitness_application/view/login/sign_in_screen.dart';
 import 'package:fitness_application/view/home/home_screen.dart';
 import 'package:fitness_application/view/excercises/excercises.dart';
 import 'package:fitness_application/view/plans/plans.dart';
@@ -20,6 +21,12 @@ class MyApp extends StatelessWidget {
       title: 'Fitness App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        scaffoldBackgroundColor:
+            Colors.lightBlue.shade50, // Light blue background for all pages
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.black, // AppBar background color
+          elevation: 0, // Remove shadow from the AppBar
+        ),
       ),
       home: MainScreen(), // Using MainScreen as the initial home property
     );
@@ -54,7 +61,8 @@ class _MainScreenState extends State<MainScreen> {
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        backgroundColor: Colors.white, // Set the background color
+        backgroundColor: Colors
+            .white, // Set the background color for the BottomNavigationBar
         selectedItemColor: Colors.blue, // Color for the selected item
         unselectedItemColor: Colors.grey, // Color for unselected items
         onTap: (index) {

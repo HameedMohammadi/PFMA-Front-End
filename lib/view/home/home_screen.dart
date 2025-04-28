@@ -152,7 +152,7 @@ class PlanCard extends StatelessWidget {
       child: ListTile(
         contentPadding: const EdgeInsets.all(16.0),
         leading: Image.asset(
-          'assets/images/$exercise.jpg', // Use appropriate image paths
+          'assets/images/abs_icon.png', // Use appropriate image paths
           width: 60,
           height: 60,
           fit: BoxFit.cover,
